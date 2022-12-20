@@ -1,0 +1,16 @@
+document.writeln("<!DOCTYPE html>");
+document.writeln("<html lang=\'en\'>");
+document.writeln("<head>");
+document.writeln("    <meta charset=\'UTF-8\'>");
+document.writeln("    <meta http-equiv=\'X-UA-Compatible\' content=\'IE=edge\'>");
+document.writeln("    <meta name=\'viewport\' content=\'width=device-width, initial-scale=1.0\'>");
+document.writeln("    <title>Document</title>");
+document.writeln("    <link href=\'http://localhost:8080/Xunhuan_war_exploded/css/header.css\' rel=\'stylesheet\' type=\'text/css\' />");
+document.writeln("</head>");
+document.writeln("<body>");
+document.writeln("    <div class=\'header\'>");
+document.writeln("        <div class=\'circular\'><img src=\'../image/圆环.png\'></div>");
+document.writeln("        <div id=\'xunhuan\'><a  href=\'http://localhost:8080/Xunhuan_war_exploded/html/admin_usermanage.html\'>鲟环平台管理系统</a></div>");
+document.writeln("     </div>   ");
+document.writeln("</body>");
+document.writeln("</html>");

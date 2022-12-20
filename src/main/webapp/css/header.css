@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.header{
+    background-color: #333;
+    width: 100%;
+    height: 50px;
+    position: relative;
+    z-index: 0;
+}
+.circular{
+    margin-top: 10px;
+    margin-left: 70px;
+    width:30px;
+    height: 30px;
+    position: absolute;
+    z-index: 1;
+    float: left;
+}
+.circular img{
+    width: 30px;
+    height: 30px;
+}
+#xunhuan{
+    float: left;
+    z-index: 1;
+    width: 250px;
+    height: 27px;
+    margin-top: 10px;
+    margin-left: 105px;
+
+}
+#xunhuan a{
+    text-decoration: none;
+    font-size: 20px;
+}
+#xunhuan a:link{
+    color: white;
+    font-family: "微软雅黑";
+    font-weight: bolder;
+}
+#xunhuan a:visited{
+    color: white;
+}
+.user{
+    float: right;
+    margin-top: 10px;
+    margin-right: 70px;
+}
+#icon{
+    float: left;
+}
+#icon img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+#login{
+    float: left;
+    margin-top: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+#login a{
+    text-decoration: none;
+    font-size: 13px;
+}
+#login a:link{
+    color: white;
+    font-family: "微软雅黑";
+    font-weight: bolder;
+}
+#login a:visited{
+    color: white;
+}
+.search{
+    margin-top: 13px;
+    margin-right: 10px;
+    float:right;
+    width: 200px;
+    height: 25px;
+    background-color: white;
+    border-radius: 40px;
+}
+.imgsearch{
+    float: left;
+    width: 15px;
+    height: 15px;
+}
+.searchicon{
+    width: 15px;
+    height: 15px;
+    margin-top: 5px;
+    margin-left: 7px;
+}
+.searchinput{
+    width: 90px;
+    height: 15px;
+    font-size: 5px;
+    margin-left: 15px;
+    margin-top: 5px;
+    border: none;
+    outline: none;
+    position: relative;
+    z-index: 2;
+}
+.searchbuttom{
+    position: absolute;
+    z-index: 3;
+    width: 70px;
+    height: 17px;
+    background-color: #333;
+    border-radius: 30px;
+    border: none;
+    color: white;
+    margin-top: 4px;
+    font-family: '微软雅黑';
+    font-weight: bolder;
+    font-size: 5px;
+}
+.exit{
+    float: right;
+    margin-right: 50px;
+    width: 180px;
+    height: 30px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: none;
+}
+.exit img{
+    width: 20px;
+    height: 20px;
+    margin-left: 60px;
+    margin-top: 5px;
+}
+.leftimg{
+    width: 25px;
+    height: 25px;
+    float: left;
+}
+.righta{
+    width: 50px;
+    height: 25px;
+    float: right;
+    margin-right: 40px;
+    margin-top: 4px;
+}
+.exit a{
+    text-decoration: none;
+    font-size: 13px;
+}
+.exit a:link{
+    color: #333;
+    font-family: "微软雅黑";
+    font-weight: bolder;
+}
+.exit a:visited{
+    color: #333;
+}

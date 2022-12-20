@@ -1,0 +1,332 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #f7f7f7;
+}
+.goods_detail{
+    width: 1260px;
+    height: 525px;
+    background-color: white;
+    margin-left: 70px;
+	margin-right: 70px;
+	margin-top: 50px;
+    border-radius: 15px;
+    box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.imgall{
+    width: 350px;
+	height: 530px;
+    z-index: 2;
+    float: left;
+}
+.picture{
+    width: 350px;
+	height: 529px;
+	position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+.picture img{
+    width: 350px;
+	height: 526px;
+    border-radius: 15px;
+}
+#picture2{
+    display: none;
+}
+#picture3{
+    display: none;
+}
+#input-file{
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    width: 350px;
+	margin-top: 140px;
+	margin-left: -200px;
+}
+
+
+.informationall{
+    width: 910px;
+    height: 525px;
+    z-index: 3;
+    margin-left: -25px;
+    float: left;
+    background-color: white;
+    border-radius: 15px;
+
+}
+.indicator{
+    float: left;
+    width: 25px;
+    height: 525px;
+    margin-left: 70px;
+	margin-right: -20px;
+    margin-top: 60px;
+}
+.indicator div{
+    width: 15px;
+    height: 100px;
+    margin-bottom: 50px;
+}
+.indicator button{
+    width: 5px;
+    height: 100px;
+    border-radius: 15px;
+    border: none;
+    background-color: #333;
+}
+#indicator2{
+    background-color: #9e9e9e;
+}
+#indicator3{
+    background-color: #9e9e9e;
+}
+.textall{
+    float: left;
+    width: 770px;
+    height: 525px;
+}
+.glist_content{
+    width: 770px;
+    height: 525px;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+.glist_content input {
+    width: 200px;
+	margin-top: 15px;
+	font-family: "微软雅黑";
+	font-size: 15px;
+    padding: 10px;
+    border-radius: 5px;
+}
+.glist_content select {
+    appearance:none;
+	width: 100px;
+	height: 30px;
+	background-color: #333;
+	color: #fff;
+	font-family: "微软雅黑";
+	border-radius: 15px;
+	border: none;
+	margin-top: 10px;
+    padding-left: 32px;
+}
+
+.rlist_content{
+    width: 770px;
+    height: 525px;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+.rlist_content input {
+    width: 200px;
+	margin-top: 15px;
+	font-family: "微软雅黑";
+	font-size: 15px;
+    padding: 10px;
+    border-radius: 5px;
+}
+.rlist_content select {
+    appearance:none;
+	width: 100px;
+	height: 30px;
+	background-color: #333;
+	color: #fff;
+	font-family: "微软雅黑";
+	border-radius: 15px;
+	border: none;
+	margin-top: 10px;
+    padding-left: 32px;
+}
+
+.condition select {
+    appearance:none;
+	width: 100px;
+	height: 30px;
+	background-color: #333;
+	color: #fff;
+	font-family: "微软雅黑";
+	border-radius: 15px;
+	border: none;
+	margin-top: 10px;
+    padding-left: 25px;
+}
+.condition input {
+	width: 70px;
+	height: 5px;
+	font-family: "微软雅黑";
+    font-size: 5px;
+	border-radius: 5px;
+	margin-top: 10px;
+    margin-left: 5px;
+    padding-left: 5px;
+}
+
+#things{
+    display: none;
+}
+.condition {
+	text-align: right;
+	float: right;
+    margin-top: -59px;
+	margin-right: 20px;
+}
+
+.condition a {
+	font-family: "微软雅黑";
+	font-weight: bolder;
+	color: #848484;
+	font-size: 35px;
+}
+
+.condition p {
+	font-family: "微软雅黑";
+	font-weight: bolder;
+	font-size: 25px;
+}
+.infor{
+    margin-top: 50px;
+    width: 760px;
+    height: 150px;
+    overflow: auto;
+    margin-bottom: 10px;
+}
+.infor::-webkit-scrollbar {
+    width: 2px;
+}
+.infor::-webkit-scrollbar-track {
+    background-color: #e4e4e4;
+    border-radius: 100px;
+}
+.infor::-webkit-scrollbar-thumb {
+    background-color: #333;
+    border-radius: 100px;
+}
+.infor textarea{
+    width: 738px;
+    height: 180px;
+    padding: 10px;
+    font-family: "微软雅黑";
+    font-weight: bold;
+    font-size: 17px;
+    overflow: auto;
+    border: none;
+    resize: none;
+}
+.infor textarea:focus{
+    outline: none;
+}
+
+#indicator2{
+	background-color: #9e9e9e;
+}
+#indicator3{
+	background-color: #9e9e9e;
+}
+.icon {
+	float: left;
+	width: 50px;
+	height: 50px;
+}
+
+.icon img {
+	float: left;
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+}
+
+.text {
+	float: left;
+	margin-left: 1px;
+	height: 50px;
+    margin-top: 5px;
+    margin-left: 15px;
+}
+
+.text a {
+	font-family: "微软雅黑";
+	font-weight: bolder;
+	color: #848484;
+	font-size: 15px;
+}
+
+.text p {
+	font-family: "微软雅黑";
+	font-weight: bolder;
+	font-size: 13px;
+}
+
+.add {
+	float: right;
+	margin-right: 50px;
+    margin-top: 10px;
+	width: 90px;
+	height: 30px;
+}
+
+.add button {
+	width: 130px;
+	height: 40px;
+	border: none;
+	background-color: #333;
+	color: white;
+	font-family: "微软雅黑";
+	font-weight: bold;
+	position: relative;
+	overflow: hidden;
+    border-radius: 15px;
+}
+
+.add button:after {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	pointer-events: none;
+	background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
+	background-repeat: no-repeat;
+	background-position: 50%;
+	transform: scale(10, 10);
+	opacity: 0;
+	transition: transform .3s, opacity .5s;
+}
+
+.add button:active:after {
+	transform: scale(0, 0);
+	opacity: .3;
+	transition: 0s;
+}
+
+.addtab {
+    width: 100px;
+    height: 20px;
+    margin-top: 50px;
+    margin-left: 650px;
+}
+
+.addtab div {
+    float: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 16px;
+}
+
+.addtab div button {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: none;
+    background-color: #333;
+}
+#tabtwo2 {
+    background-color: #9e9e9e;
+}

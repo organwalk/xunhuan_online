@@ -1,0 +1,353 @@
+*{
+    margin: 0 auto;
+    padding: 0;
+}
+body{
+    overflow-y: hidden;
+}
+.all{
+    width: 100%;
+    height: 100%;
+}
+.left{
+    float: left;
+}
+.left img{
+    height: 100vh;
+    filter: brightness(90%);
+    z-index: 0;
+    position: relative;
+}
+.login{
+    width: 350px;
+    height: 600px;
+    border-radius: 15px;
+    background-color: #fff;
+    z-index: 3;
+    margin-top: -45%;
+    margin-left: 4%;
+    position: absolute;
+    box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.login h1{
+    margin-top: 35%;
+    margin-left: 16%;
+    font-family: "微软雅黑";
+}
+.login span{
+    margin-left: 17%;
+    font-family: "微软雅黑";
+    font-size: 5px;
+    color: #666;
+}
+.login label{
+    font-size: 10px;
+    font-family: "微软雅黑";
+    font-weight: bolder;
+}
+.login input{
+    width: 220px;
+    height: 30px;
+    font-size: 10px;
+    padding-left: 10px;
+    border-radius: 3px;
+    border: 1px solid #666;
+}
+.login input:focus{
+    outline: 1px solid black;
+}
+.login input:hover{
+    outline: 1px solid black;
+}
+.login div{margin-left: 16%;}
+.login a{
+    text-decoration: none;
+}
+.login a:link{
+    color: black;
+    font-family: "微软雅黑";
+    font-weight: bolder;
+}
+.login a:visited{
+    color: black;
+}
+.login a:hover{
+    text-decoration:underline;
+}
+#submit{
+    background-color: #333;
+    color: #fff;
+    font-family: "微软雅黑";
+    font-weight: bolder;
+    width: 230px;
+    border-radius: 3px;
+    margin-left: 16%;
+}
+.register{
+    width: 350px;
+    height: 600px;
+    border-radius: 15px;
+    background-color: #fff;
+    display: none;
+    margin-top: -45%;
+    margin-left: 4%;
+    position: absolute;
+    box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#register{
+    background-color: #333;
+    color: #fff;
+    font-family: "微软雅黑";
+    font-weight: bolder;
+    width: 230px;
+    height: 30px;
+    border-radius: 3px;
+    
+}
+.register img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+.icon{
+    width: 70px;
+    height: 70px;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    margin-left: 37%;
+}
+#input-file{
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    width: 70px;
+    height: 70px;
+    margin-left: -80px;
+}
+.register h1{
+    margin-top: 10%;
+    margin-left: 10%;
+    font-family: "微软雅黑";
+}
+.register span{
+    margin-left: 11%;
+    font-family: "微软雅黑";
+    font-size: 5px;
+    color: #666;
+}
+.register label{
+    font-size: 10px;
+    font-family: "微软雅黑";
+    font-weight: bolder;
+    margin-left: 15%;
+}
+.register input{
+    width: 220px;
+    margin-left: 15%;
+    height: 20px;
+    font-size: 10px;
+    padding-left: 10px;
+    border-radius: 5px;
+    border: 1px solid #666;
+}
+.short{
+    width: 100px;
+    margin-left: 9%;
+    float: left;
+}
+.short input{
+    width: 100px;
+    height: 20px;
+    font-size: 3px;
+    padding-left: 10px;
+    border-radius: 5px;
+    border: 1px solid #666;
+}
+.short input:focus{
+    outline: 1px solid black;
+}
+.short input:hover{
+    outline: 1px solid black;
+}
+.register a{
+    text-decoration: none;
+}
+.register a:link{
+    color: black;
+    font-family: "微软雅黑";
+    font-weight: bolder;
+}
+.register a:visited{
+    color: black;
+}
+.register a:hover{
+    text-decoration:underline;
+}
+.right{
+    height: 100vh;
+    float: left;
+    background-color: white;
+}
+.up{
+    width: 700px;
+}
+.text{
+    float: left;
+    width: 300px;
+    margin-top:25%;
+    margin-left: 100px;
+}
+.text h1{
+    font-family: "微软雅黑";
+    font-size: 40px;
+}
+.text p{
+    font-size: 20px;
+    font-family: "微软雅黑";
+}
+.text span{
+    font-family: "黑体";
+}
+.img{
+    width: 290px;
+    height: 190px;
+    float: right;
+    margin-top: -140px;
+}
+.img img{
+    margin-top: 50%;
+    width: 520px;
+    box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.menu{
+    width: 50px;
+    margin-top: 50px;
+    margin-left: 100px;
+}
+.menu button{
+    width: 50px;
+    border: none;
+    background-color: white;
+    position: relative;
+    overflow: hidden;
+}
+.menu button img{
+    width: 50px;
+}
+.menu button:after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    background-image: radial-gradient(circle, #666 10%, transparent 10.01%);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    transform: scale(10, 10);
+    opacity: 0;
+    transition: transform .3s, opacity .5s;
+}
+.menu button:active:after{
+    transform: scale(0, 0);
+    opacity: .3;
+    transition: 0s;
+}
+.browse{
+    clear: both;
+}
+.browse button{
+    width: 100px;
+    height: 30px;
+    border: none;
+    background-color: #333;
+    border-radius: 15px;
+    color:white;
+    font-family: "微软雅黑";
+    font-weight: bold;
+    margin-top: 50px;
+    margin-left: 15%;
+    position: relative;
+    overflow: hidden;
+}
+.browse button:after{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    transform: scale(10, 10);
+    opacity: 0;
+    transition: transform .3s, opacity .5s;
+}
+.browse button:active:after{
+    transform: scale(0, 0);
+    opacity: .3;
+    transition: 0s;
+}
+.about{
+    width: 100%;
+    height: 10%;
+    position: fixed;
+    bottom: 0;
+    background-color: #333;
+    
+}
+.email{
+    float: right;
+    margin-top: 20px;
+}
+.email img{
+    width: 30px;
+    height: 30px;
+}
+.email1{
+    margin-top: 25px;
+    margin-right: 1%;
+    margin-left: 10px;
+    float: right;
+}
+.email1 a{
+    color: #fff;
+    font-family: "微软雅黑";
+    text-decoration: none;
+}
+.email1 a:link{
+    color: #fff;
+    font-family: "微软雅黑";
+    font-weight: bolder;
+}
+.email1 a:visited{
+    color: #fff;
+}
+.email1 a:hover{
+    text-decoration:underline;
+}
+.email2{
+    margin-top: 25px;
+    margin-right: 35%;
+    margin-left: 10px;
+    float: right;
+    color: #fff;
+    font-family: "微软雅黑";
+}
+.tipmess{
+color: white;
+background-color: #c23531;
+width: 160px;
+padding: 10px;
+border-radius: 10px;
+font-family: "微软雅黑";
+font-weight: bolder;
+font-size: 13px;
+}
+

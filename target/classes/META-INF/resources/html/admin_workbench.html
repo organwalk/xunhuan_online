@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="http://localhost:8080/Xunhuan_war_exploded/css/admin_usermanage.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="http://localhost:8080/Xunhuan_war_exploded/js/jquery-3.6.1.js"></script>
+    <script type="text/javascript" src="http://localhost:8080/Xunhuan_war_exploded/js/echarts.js"></script>
+</head>
+
+<body>
+    <div class="tabmeau">
+        <div class="tabmeau-logo">
+            <img src="../image/圆环(黑).png"><span>鲟环</span>
+        </div>
+        <div class="tabmeau-user">
+            <img src="../image/工作台.png"><span>Workbench</span>
+            <div class="choosetabmeau-user"></div>
+        </div>
+        <div class="tabmeau-data">
+            <img src="../image/折线图.png"><span>Data Statistics</span>
+            <div class="choosetabmeau-data"></div>
+        </div>
+        <div class="tabmeau-admin">
+            <img src="../image/杏花.jpg"><span>Hi！&nbspAdmin</span>
+        </div>
+        <div class="tabmeau-logout">
+            <img src="../image/退出（管理员）.png"><span>Log out</span>
+            <div class="choosetabmeau-data"></div>
+        </div>
+        <hr class="vertical-line" />
+    </div>
+    <div class="work">
+        <div class="usertable">
+            <h3>User List</h3>
+            <div class="usertab2">
+                <button class="allusertab">Normal</button>
+                <button class="reportedtab">Reported</button>
+                <button class="dishonest">Ban</button>
+            </div><div id="footer"></div>
+            <div class='searchuser'>
+                <div class='imgsearch2'><img class='searchicon2' src='../image/搜索.png'></div>
+                <form id="searchoneuser">
+                <input class='searchinput2' id="byusername" name='username' type='text' placeholder='Search...'>
+                <input class='searchbuttom2' type='submit' value='Seach'>
+                </form>
+            </div>
+            <div class="alluser" id="alluser2">
+                <table class="userta">
+                    <th>头像</th>
+                    <th>账号 / 姓名</th>
+                    <th>学院 / 班级</th>
+                    <th>手机 / 微信</th>
+                    <th>注册时间</th>
+                    <th>状态</th>
+                    <th>操作</th>
+                    <tr class="usertr"></tr>
+                </table>
+            </div>
+            <div id="#footer"></div>
+        </div>
+        <div class="ordertable">
+            <h3>Order List</h3>
+            <select id="mySelect">
+                <option value="option1">现金交易</option>
+                <option value="option2">求购信息</option>
+            </select>
+            <div id="footer2"></div>
+            <div class="alluser2" id="alluser">
+                <table class="orderta">
+                    <th>商品</th>
+                    <th>成色</th>
+                    <th>出售者</th>
+                    <th>发起时间</th>
+                    <th>购买者</th>
+                    <th>价格</th>
+                    <th>状态</th>
+                    <th>完成时间</th>
+                    <tr class="ordertr"></tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="pickuser">
+        <div class="pickuser_icon">
+            <img src="../image/头像.png">
+            <p>未指定</p>
+        </div>
+        <div class='searchuser2'>
+            <form id="searchoneuser2">
+            <input class='searchinput' style="outline: none;border: none;margin-left: 15px;margin-top: 8px;" id="inputaccount" name='account' type='text' placeholder='根据账号指定一名用户'>
+            <input style="opacity: 0;" type='submit' value='Seach'>
+            </form>
+        </div>
+        <div class="usertsell" id="usertsell"></div>
+        <div class="threeboxvalue">
+            <div class="boxone">
+                <div class="totalp">
+                    <img src="../image/高消费.png">
+                </div>
+                <div class="totalp_text">
+                    <h3>共计消费</h3>
+                    <h1>--</h1>
+                </div>
+            </div>
+            <div class="boxtwo"style="clear: both;">
+                <div class="totalc">
+                    <img src="../image/收入情况.png">
+                </div>
+                <div class="totalc_text">
+                    <h3>共计收入</h3>
+                    <h1>--</h1>
+                </div>
+            </div>
+            <div class="boxthree"style="clear: both;">
+                <div class="totald">
+                    <img src="../image/违约.png">
+                </div>
+                <div class="totald_text">
+                    <h3>违约率</h3>
+                    <h1>--</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="http://localhost:8080/Xunhuan_war_exploded/js/admin_usermanage.js"></script>
+
+</html>

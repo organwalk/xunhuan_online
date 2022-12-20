@@ -1,0 +1,651 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #fff;
+    overflow: hidden;
+}
+.manage{
+    width: 1260px;
+    height: 800px;
+    background-color: #f7f7f7;
+    margin-left: 70px;
+	margin-right: 70px;
+    margin-top: 5px;
+}
+.managetab{
+    width: 300px;
+    height: 60px;
+    margin-left: 500px;
+    padding-top: 10px;
+}
+.usertab{
+    float: left;
+    width: 100px;
+    height: 40px;
+    
+}
+.usertab button{
+    width: 100px;
+    height: 40px;
+    background-color: #333;
+    color: white;
+    border-radius: 40px;
+    font-family: "微软雅黑";
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+    border: none;
+}
+.usertab button:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    transform: scale(10, 10);
+    opacity: 0;
+    transition: transform .3s, opacity .5s;
+}
+
+.usertab button:active:after {
+    transform: scale(0, 0);
+    opacity: .3;
+    transition: 0s;
+}
+.goodstab{
+    width: 100px;
+    height: 40px;
+    float: left;
+    margin-left: 50px;
+}
+.goodstab button{
+    width: 100px;
+    height: 40px;
+    background-color: #9e9e9e;
+    color: white;
+    border-radius: 40px;
+    font-family: "微软雅黑";
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+    border: none;
+}
+.goodstab button:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    transform: scale(10, 10);
+    opacity: 0;
+    transition: transform .3s, opacity .5s;
+}
+
+.goodstab button:active:after {
+    transform: scale(0, 0);
+    opacity: .3;
+    transition: 0s;
+}
+.usertable{
+    width: 800px;
+    height: 400px;
+    padding-top: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 25px;
+    margin-top: 15px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.usertab2{
+    float: left;
+    width: 218px;
+    height: 21px;
+    margin-top: 10px;
+    border-radius: 15px;
+    background-color: #9e9e9e;
+}
+.usertab2 button{
+    width: 70px;
+    height: 20px;
+    border: none;
+    color: white;
+    font-weight: bolder;
+    font-family: "微软雅黑";
+    font-size: 2px;
+}
+.searchuser{
+    float:right;
+    width: 200px;
+    height: 30px;
+    background-color: white;
+    border-radius: 40px;
+    box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, 0.2), 0 2px 20px 0 rgba(0, 0, 0, 0.19);
+    
+}
+.imgsearch2{
+    float: left;
+    width: 15px;
+    height: 15px;
+}
+.searchicon2{
+    width: 16px;
+    height: 16px;
+    margin-left: 8px;
+    margin-top: 6px;
+}
+.searchinput2{
+    width: 90px;
+    height: 30px;
+    font-size: 8px;
+    margin-left: 16px;
+    border: none;
+    outline: none;
+    position: relative;
+    z-index: 2;
+}
+.searchbuttom2{
+    position: absolute;
+    z-index: 3;
+    width: 70px;
+    height: 23px;
+    background-color: #333;
+    border-radius: 30px;
+    border: none;
+    color: white;
+    margin-top: 4px;
+    font-family: '微软雅黑';
+    font-weight: bolder;
+    font-size: 5px;
+}
+.allusertab{
+    background-color: #333;
+    border-radius: 15px;
+}
+.alluser{
+    width: 805px;
+    height: 330px;
+    overflow: auto;
+}
+.alluser::-webkit-scrollbar {
+    width: 2px;
+}
+.alluser::-webkit-scrollbar-track {
+    background-color: #e4e4e4;
+    border-radius: 100px;
+}
+.alluser::-webkit-scrollbar-thumb {
+    background-color: #333;
+    border-radius: 100px;
+}
+.dishonest{
+    background-color: #9e9e9e;
+    border-radius: 15px;
+}
+.usertable table{
+    width: 800px;
+    border-collapse: separate;
+    border-spacing: 0px 10px;
+}
+.usericon{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.usertable th{
+    border-bottom: 1px solid #333;
+    color: black;
+    font-family: "微软雅黑";
+    font-size: 13px;
+    font-weight: bolder;
+    width: 100px;
+    height: 40px;
+    text-align: left;
+    padding-left: 10px;
+}
+.usertabble tr{
+    margin: 5px;
+}
+.usertable td{
+    width: 100px;
+    height: 20px;
+    background-color: #ebebea;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 10px;
+    font-family: "微软雅黑";
+}
+.ttd{
+    border-radius: 15px 0px 0px 15px;
+}
+.wtd{
+    border-radius: 0px 15px 15px 0px;
+}
+.wtd button{
+    width: 50px;
+    height: 20px;
+    color: #fff;
+    border-radius: 15px;
+    margin-left: -10px;
+    border: none;
+}
+.warning{
+    background-color: #f1c40f ;
+    box-shadow: 0 2px 10px 1px #f5d657;
+}
+.ban{
+    background-color: #e74c3b;
+    box-shadow: 0 2px 10px 1px #ef8277;
+    margin-top: 10px;
+}
+#dishonest{
+    display: none;
+}
+.unban{
+    background-color: #1bbc9b;
+    box-shadow: 0 2px 10px 1px #5fd0b9;
+}
+.reportedtab{
+    background-color: #9e9e9e;
+    border-radius: 15px;
+}
+#reported{
+    display: none;
+}
+.tabmeau{
+    width: 250px;
+    height: 100%;
+    float: left;
+    background-color: #f7f7f7;
+}
+.tabmeau-logo{
+    width: 200px;
+    height: 30px; 
+    margin-left: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    line-height: 30px;
+    font-size: 30px;
+    font-weight: bolder;
+    font-family: "微软雅黑";
+}
+.tabmeau-logo img{
+    width: 30px;
+    height: 30px;
+    float: left;
+    animation: spin 5s linear infinite;
+    margin-top: 5px;
+}
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.tabmeau-logo span {
+    float: left;
+    margin-left: 15px;
+    margin-top: 5px;
+  }
+.vertical-line {
+    height: 100%;
+    position: absolute;
+    margin-left: 250px;
+    top: 0;
+  }
+.tabmeau-user{
+    width: 200px;
+    height: 30px; 
+    margin-left: 30px;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    line-height: 30px;
+    font-size: 15px;
+    font-weight: bolder;
+    font-family: "微软雅黑";
+}
+.tabmeau-user img{
+    width: 30px;
+    height: 30px;
+    float: left;
+}
+.tabmeau-user span {
+    float: left;
+    margin-left: 10px;
+  }
+.choosetabmeau-user{
+    float: right;
+    width: 6px;
+    height: 35px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin-right: -20px;
+    margin-top: -3px;
+    background-color: #333;
+}
+.tabmeau-data{
+    width: 200px;
+    height: 30px; 
+    margin-left: 30px;
+    opacity: 0.5;
+    padding-bottom: 30px;
+    line-height: 30px;
+    font-size: 15px;
+    font-weight: bolder;
+    font-family: "微软雅黑";
+}
+.tabmeau-data img{
+    width: 30px;
+    height: 30px;
+    float: left;
+}
+.tabmeau-data span {
+    float: left;
+    margin-left: 10px;
+  }
+.choosetabmeau-data{
+    float: right;
+    width: 6px;
+    height: 35px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    margin-right: -20px;
+    margin-top: -3px;
+    background-color: #333;
+    display: none;
+}
+.tabmeau-admin{
+    width: 200px;
+    height: 30px; 
+    margin-left: 20px;
+    padding-bottom: 30px;
+    background-color: #eeeeee;
+    border-radius: 15px;
+    line-height: 30px;
+    font-size: 15px;
+    font-weight: bolder;
+    font-family: "微软雅黑";
+    margin-top: 300px;
+    bottom: 0;
+    
+}
+.tabmeau-admin img{
+    width: 30px;
+    height: 30px;
+    float: left;
+    border-radius: 50%;
+    margin-left: 40px;
+    margin-top: 15px;
+}
+.tabmeau-admin span {
+    float: left;
+    margin-left: 10px;
+    margin-top: 15px;
+}
+.tabmeau-logout{
+    width: 200px;
+    height: 30px; 
+    margin-left: 30px;
+    margin-top: 30px;
+    opacity: 0.5;
+    padding-bottom: 30px;
+    line-height: 30px;
+    font-size: 15px;
+    font-weight: bolder;
+    font-family: "微软雅黑";
+}
+.tabmeau-logout img{
+    width: 30px;
+    height: 30px;
+    float: left;
+}
+.tabmeau-logout span {
+    float: left;
+    margin-left: 10px;
+  }
+.work{
+    width: 800px;
+    height: 100%;
+    float: left;
+    
+}
+.ordertable{
+    width: 800px;
+    height: 210px;
+    padding-top: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 25px;
+    margin-top: 25px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.alluser2{
+    width: 805px;
+    height: 170px;
+    overflow: auto;
+}
+.alluser2::-webkit-scrollbar {
+    width: 2px;
+}
+.alluser2::-webkit-scrollbar-track {
+    background-color: #e4e4e4;
+    border-radius: 100px;
+}
+.alluser2::-webkit-scrollbar-thumb {
+    background-color: #333;
+    border-radius: 100px;
+}
+.ordertable table{
+    width: 800px;
+    height: 190px;
+    overflow: auto;
+    border-collapse: separate;
+    border-spacing: 0px 10px;
+}
+.ordertable th{
+    background-color: #eeeeee;
+    color: black;
+    font-family: "微软雅黑";
+    font-size: 13px;
+    font-weight: bolder;
+    width: 100px;
+    height: 20px;
+    text-align: left;
+    padding-left: 10px;
+}
+.ordertable tr{
+    margin: 10px;
+}
+.ordertable td{
+    width: 100px;
+    height: 20px;
+    padding-left: 10px;
+    font-size: 10px;
+    font-family: "微软雅黑";
+}
+.ordertable select{
+    float: right;
+    margin-top: -20px;
+}
+#mySelect{
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    width: 80px;
+    padding-left:5px;
+}
+.pickuser{
+    width: 270px;
+    height: 100%;
+    margin-left: 80px;
+    float: left;
+    margin-top: 15px;
+    border-radius: 15px;
+    box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.pickuser_icon{
+    width: 270px;
+    height: 200px;
+    margin-top: 20px;
+    text-align: center;
+}
+.pickuser_icon img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+.searchuser2{
+    width: 200px;
+    height: 30px;
+    margin-top: -80px;
+    margin-left: 35px;
+    background-color: white;
+    border-radius: 40px;
+    box-shadow: 2px 2px 8px 1px rgba(0, 0, 0, 0.2), 0 2px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+.usertsell{
+    width: 240px;
+    height: 220px;
+    margin-top: 20px;
+    margin-left: 15px;
+    padding-top: 10px;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+}
+.threeboxvalue{
+    width: 270px;
+    height: 100%;
+}
+.totalp{
+    float: left;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    color: white;
+    background-image: radial-gradient(#32c3a5, #1bbc9b);
+    box-shadow: 0 2px 10px 1px #1bbc9b;
+    margin-left: 40px;
+    margin-top: 15px;
+}
+.totalp img{
+    float: left;
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.totalp_text{
+    float: left;
+    width: 100px;
+    height: 60px;
+    margin-left: 30px;
+    margin-top: 15px;
+}
+.totalp_text h3{
+    color: #9e9e9e;
+    font-size: 15px;
+}
+.totalp_text h1{
+    font-size: 25px;
+}
+.totalc{
+    float: left;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    color: white;
+    background-image: radial-gradient(#d9b319, #f2ca27);
+    box-shadow: 0 2px 10px 1px #f2ca27;
+    margin-left: 40px;
+    margin-top: 15px;
+}
+.totalc img{
+    float: left;
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.totalc_text{
+    float: left;
+    width: 100px;
+    height: 60px;
+    margin-left: 30px;
+    margin-top: 15px;
+}
+.totalc_text h3{
+    color: #9e9e9e;
+    font-size: 15px;
+}
+.totalc_text h1{
+    font-size: 25px;
+}
+.totald{
+    float: left;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    color: white;
+    background-image: radial-gradient(#e84c3d, #ea5e50);
+    box-shadow: 0 2px 10px 1px #ea5e50;
+    margin-left: 40px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.totald img{
+    float: left;
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.totald_text{
+    float: left;
+    width: 100px;
+    height: 60px;
+    margin-left: 30px;
+    margin-top: 15px;
+}
+.totald_text h3{
+    color: #9e9e9e;
+    font-size: 15px;
+}
+.totald_text h1{
+    font-size: 25px;
+}
+#footer{
+    float: left;
+    width: 350px;
+    height: 20px;
+    margin-left: 20px;
+    margin-top: 8px;
+}
+#footer2{
+    width: 350px;
+    height: 20px;
+    margin-left: 90px;
+    margin-top: -24px;
+}
