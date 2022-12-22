@@ -145,7 +145,7 @@ public class GoodsDao {
     //现金交易列表
     public List<Map<String,Object>> tradeorderlist() throws SQLException {
         QueryRunner r = new QueryRunner(DataSourceUtils.getDataSource());
-        String sql="SELECT g.*, u1.name as owner_name, u2.name as buyer_name\n" +
+        String sql="SELECT g.*, u1.name as owner_name,u1.photo as owner_photo, u2.name as buyer_name,u2.photo as buyer_photo\n" +
                 "FROM tthings g\n" +
                 "LEFT JOIN tuser u1 ON g._owner = u1._id\n" +
                 "LEFT JOIN tuser u2 ON g._buyer = u2._id\n";
