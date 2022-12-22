@@ -332,6 +332,7 @@ body{
 .tabmeau-user span {
     float: left;
     margin-left: 10px;
+    cursor: default;
   }
 .choosetabmeau-user{
     float: right;
@@ -362,6 +363,7 @@ body{
 .tabmeau-data span {
     float: left;
     margin-left: 10px;
+    cursor: default;
   }
 .choosetabmeau-data{
     float: right;
@@ -401,6 +403,7 @@ body{
     float: left;
     margin-left: 10px;
     margin-top: 15px;
+    cursor: default;
 }
 .tabmeau-logout{
     width: 200px;
@@ -422,12 +425,19 @@ body{
 .tabmeau-logout span {
     float: left;
     margin-left: 10px;
+    cursor: default;
   }
 .work{
     width: 800px;
     height: 100%;
     float: left;
     
+}
+.ordertr img{
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    border-radius: 50%;
 }
 .ordertable{
     width: 800px;
@@ -484,6 +494,7 @@ body{
     padding-left: 10px;
     font-size: 10px;
     font-family: "微软雅黑";
+    vertical-align:middle;
 }
 .ordertable select{
     float: right;

@@ -552,11 +552,11 @@ $(document).ready(function() {
                     }
                     let allResult =
                         '<tr class="ordertr">' +
-                        '<td>' + item.thing_name + '</td>' +
+                        '<td>'+ item.thing_name + '</td>' +
                         '<td>' + item.new_old + '</td>' +
-                        '<td>' + item.owner_name + '</td>' +
+                        '<td>'+ item.owner_name + '</td>' +
                         '<td>' + item.publish_date + '</td>' +
-                        '<td>' + item.buyer_name + '</td>' +
+                        '<td>'+ item.buyer_name + '</td>' +
                         '<td>' + item.price + '元</td>' +
                         '<td>' + wait + '</td>' +
                         '<td>' + item.finished_date + '</td>'
