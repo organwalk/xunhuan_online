@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="../css/admin_goodsmanage.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="../js/echarts.js"></script>
+    <script type="text/javascript" src="../js/jquery-3.6.1.js"></script>
+</head>
+<body>
+    <div class="tabmeau">
+        <div class="tabmeau-logo">
+            <img src="../image/圆环(黑).png"><span>鲟环</span>
+        </div>
+        <div class="tabmeau-user">
+            <img src="../image/工作台.png"><span onclick="window.location='../html/admin_workbench.html';">Workbench</span>
+        </div>
+        <div class="tabmeau-data">
+            <img src="../image/折线图.png"><span>Data Statistics</span>
+            <div class="choosetabmeau-data"></div>
+        </div>
+        <div class="tabmeau-admin">
+            <img src="../image/杏花.jpg"><span>Hi！&nbspAdmin</span>
+        </div>
+        <div class="tabmeau-logout">
+            <img src="../image/退出（管理员）.png"><span>Log out</span>
+        </div>
+        <hr class="vertical-line" />
+    </div>
+    <div class="selldata">
+        <div class="up_selldata">
+            <div class="sellchart" id="totalsaleslist"></div>
+            <div class="transachart" id="transasuccess"></div>
+            <div class="registchart" id="registsum"></div>
+        </div>
+        <div class="sellchart3" id="growthtrendlist"></div>
+        <div class="avginfor">
+            <div class="sellprice">
+                <div class="shutiao"></div>
+                <div class="avgsellprice">
+                    <h5>Average Selling Price</h5>
+                    <h2>￥500</h2>
+                </div>
+                <div class="zengfu">
+                    <p>↑ +6.5%&nbsp;&nbsp;<span>Since last month</span></p>
+                </div>
+            </div>
+            <div class="sellprice2">
+                <div class="shutiao2"></div>
+                <div class="avgsellprice2">
+                    <h5>Average Acquire Price</h5>
+                    <h2>￥300</h2>
+                </div>
+                <div class="zengfu2">
+                    <p>↑ +6.5%&nbsp;&nbsp;<span>Since last month</span></p>
+                </div>
+            </div>
+        </div>
+        <div class="dishonchart2" id="college"></div>
+    </div>                          
+</body>
+<script type="text/javascript" src="../js/admin_goodsmanage.js"></script>
+</html>
