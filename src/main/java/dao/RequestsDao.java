@@ -133,10 +133,38 @@ public class RequestsDao {
     //求购信息列表
     public List<Map<String,Object>> requestsList() throws SQLException {
         QueryRunner r = new QueryRunner(DataSourceUtils.getDataSource());
-        String sql="SELECT g.*, u1.name as owner_name, u2.name as giver_name\n" +
+        String sql="SELECT g.*, u1.name as owner_name, u1.photo as owner_photo,u1.account as owner_account,u2.account as giver_account,u2.photo as giver_photo,u2.name as giver_name\n" +
                 "FROM trequests g\n" +
                 "LEFT JOIN tuser u1 ON g._owner = u1._id\n" +
                 "LEFT JOIN tuser u2 ON g._giver = u2._id\n";
+        return r.query(sql, new MapListHandler());
+    }
+    //求购总量图表
+    public List<Map<String,Object>> totaldemandList() throws SQLException {
+        QueryRunner r = new QueryRunner(DataSourceUtils.getDataSource());
+        String sql="SELECT EXTRACT(MONTH FROM finished_date) as month, COUNT(_id) as count\n" +
+                "FROM trequests\n" +
+                "WHERE finished = 2\n" +
+                "GROUP BY month\n";
+        return r.query(sql, new MapListHandler());
+    }
+    //求购总金额图表
+    public List<Map<String,Object>> totaldemandpriceList() throws SQLException {
+        QueryRunner r = new QueryRunner(DataSourceUtils.getDataSource());
+        String sql="SELECT EXTRACT(MONTH FROM finished_date) as month, SUM(price_low) as price\n" +
+                "FROM trequests\n" +
+                "WHERE finished = 2\n" +
+                "GROUP BY month\n";
+        return r.query(sql, new MapListHandler());
+    }
+    //各月成交平均价格
+    public List<Map<String,Object>> averageneedprice() throws SQLException {
+        QueryRunner r = new QueryRunner(DataSourceUtils.getDataSource());
+        String sql="SELECT\n" +
+                "    MONTH(finished_date) as month,\n" +
+                "    ROUND(AVG(price_low)) as avg_price\n" +
+                "FROM trequests where finished=2\n" +
+                "GROUP BY month\n";
         return r.query(sql, new MapListHandler());
     }
 }

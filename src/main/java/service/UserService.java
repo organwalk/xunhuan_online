@@ -2,6 +2,9 @@ package service;
 
 import dao.UserDao;
 import model.User;
+import org.apache.commons.dbutils.QueryRunner;
+import org.apache.commons.dbutils.handlers.MapListHandler;
+import utils.DataSourceUtils;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -152,6 +155,25 @@ public class UserService {
         List<Map<String,Object>> list=null;
         try {
             list=uDao.selectmonthByAccount2(account);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return list;
+    }
+    //各学院注册用户图表
+    public List<Map<String,Object>> departmentlist() {
+        List<Map<String,Object>> list=null;
+        try {
+            list=uDao.departmentlist();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return list;
+    }
+    public List<Map<String,Object>> bandepartmentlist() {
+        List<Map<String,Object>> list=null;
+        try {
+            list=uDao.bandepartmentlist();
         } catch (SQLException e) {
             e.printStackTrace();
         }

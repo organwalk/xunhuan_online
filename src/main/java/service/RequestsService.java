@@ -164,4 +164,34 @@ public class RequestsService {
         }
         return list;
     }
+    //求购总量图表
+    public List<Map<String,Object>> totaldemandList() {
+        List<Map<String,Object>> list=null;
+        try {
+            list=rDao.totaldemandList();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return list;
+    }
+    //求购总金额图表
+    public List<Map<String,Object>> totaldemandpriceList() {
+        List<Map<String,Object>> list=null;
+        try {
+            list=rDao.totaldemandpriceList();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return list;
+    }
+    //各月成交平均价格
+    public List<Map<String,Object>> averageneedprice() {
+        List<Map<String,Object>> list=null;
+        try {
+            list=rDao.averageneedprice();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return list;
+    }
 }

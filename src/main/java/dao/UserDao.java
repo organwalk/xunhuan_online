@@ -145,4 +145,35 @@ public class UserDao {
                 "GROUP BY MONTH(finished_date)";
         return r.query(month, new MapListHandler(), account);
     }
+    //各学院注册用户图表
+    public List<Map<String,Object>> departmentlist() throws SQLException {
+        QueryRunner r = new QueryRunner(DataSourceUtils.getDataSource());
+        String sql="SELECT\n" +
+                "    CASE department\n" +
+                "        WHEN '信息技术学院' THEN '信息技术'\n" +
+                "        WHEN '机电技术学院' THEN '机电技术'\n" +
+                "        WHEN '财贸学院'THEN '财贸学院'\n" +
+                "        WHEN '汽车技术学院' THEN '汽车技术'\n" +
+                "        ELSE '艺术设计'\n" +
+                "    END as xueyuan,\n" +
+                "    COUNT(_id) as count\n" +
+                "FROM tuser\n" +
+                "GROUP BY xueyuan";
+        return r.query(sql, new MapListHandler());
+    }
+    public List<Map<String,Object>> bandepartmentlist() throws SQLException {
+        QueryRunner r = new QueryRunner(DataSourceUtils.getDataSource());
+        String sql="SELECT\n" +
+                "    CASE department\n" +
+                "        WHEN '信息技术学院' THEN '信息技术'\n" +
+                "        WHEN '机电技术学院' THEN '机电技术'\n" +
+                "        WHEN '财贸学院' THEN '财贸学院'\n" +
+                "        WHEN '汽车技术学院' THEN '汽车技术'\n" +
+                "        ELSE '艺术设计'\n" +
+                "    END as xueyuan,\n" +
+                "    SUM(CASE WHEN state = '封禁' THEN 1 ELSE 0 END) as count\n" +
+                "FROM tuser\n" +
+                "GROUP BY xueyuan\n";
+        return r.query(sql, new MapListHandler());
+    }
 }

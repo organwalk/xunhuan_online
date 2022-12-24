@@ -145,10 +145,56 @@ public class GoodsDao {
     //现金交易列表
     public List<Map<String,Object>> tradeorderlist() throws SQLException {
         QueryRunner r = new QueryRunner(DataSourceUtils.getDataSource());
-        String sql="SELECT g.*, u1.name as owner_name,u1.photo as owner_photo, u2.name as buyer_name,u2.photo as buyer_photo\n" +
-                "FROM tthings g\n" +
-                "LEFT JOIN tuser u1 ON g._owner = u1._id\n" +
-                "LEFT JOIN tuser u2 ON g._buyer = u2._id\n";
+        String sql = "SELECT g.*, u1.name as owner_name, u1.account as owner_account, u1.photo as owner_photo, u2.name as buyer_name, u2.account as buyer_account, u2.photo as buyer_photo, tp.cover as thing_photo " +
+                "FROM tthings g " +
+                "LEFT JOIN tuser u1 ON g._owner = u1._id " +
+                "LEFT JOIN tuser u2 ON g._buyer = u2._id " +
+                "LEFT JOIN tthingsphoto tp ON g._id = tp._thing";
+        return r.query(sql, new MapListHandler());
+    }
+    //出售总量图表
+    public List<Map<String,Object>> totalsaleslist() throws SQLException {
+        QueryRunner r = new QueryRunner(DataSourceUtils.getDataSource());
+        String sql="SELECT EXTRACT(MONTH FROM finished_date) as month, COUNT(_id) as count\n" +
+                "FROM tthings\n" +
+                "WHERE finished = 2\n" +
+                "GROUP BY month\n";
+        return r.query(sql, new MapListHandler());
+    }
+    //出售总金额图表
+    public List<Map<String,Object>> totalsalespricelist() throws SQLException {
+        QueryRunner r = new QueryRunner(DataSourceUtils.getDataSource());
+        String sql="SELECT EXTRACT(MONTH FROM finished_date) as month, SUM(price) as price\n" +
+                "FROM tthings\n" +
+                "WHERE finished = 2\n" +
+                "GROUP BY month";
+        return r.query(sql, new MapListHandler());
+    }
+    //新旧商品喜好
+    public List<Map<String,Object>> newoldgoodslist() throws SQLException {
+        QueryRunner r = new QueryRunner(DataSourceUtils.getDataSource());
+        String sql="SELECT\n" +
+                "    new_old,\n" +
+                "    CASE CAST(new_old AS CHAR)\n" +
+                "        WHEN 1 THEN '全新'\n" +
+                "        WHEN 0.8 THEN '八成'\n" +
+                "        WHEN 0.5 THEN '五成'\n" +
+                "        WHEN 0.3 THEN '三成'\n" +
+                "        ELSE '破烂'\n" +
+                "    END as fenzu,\n" +
+                "    COUNT(_id) as count\n" +
+                "FROM tthings\n" +
+                "GROUP BY new_old, fenzu";
+        return r.query(sql, new MapListHandler());
+    }
+    //各月成交平均价格
+    public List<Map<String,Object>> averagesellingprice() throws SQLException {
+        QueryRunner r = new QueryRunner(DataSourceUtils.getDataSource());
+        String sql="SELECT\n" +
+                "    MONTH(finished_date) as month,\n" +
+                "    ROUND(AVG(price)) as avg_price\n" +
+                "FROM tthings where finished=2\n" +
+                "GROUP BY month";
         return r.query(sql, new MapListHandler());
     }
 }

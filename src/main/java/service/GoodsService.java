@@ -161,4 +161,44 @@ public class GoodsService {
         }
         return list;
     }
+    //出售总量图表
+    public List<Map<String,Object>> totalsaleslist() {
+        List<Map<String,Object>> list=null;
+        try {
+            list=gDao.totalsaleslist();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return list;
+    }
+    //出售总金额图表
+    public List<Map<String,Object>> totalsalespricelist() {
+        List<Map<String,Object>> list=null;
+        try {
+            list=gDao.totalsalespricelist();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return list;
+    }
+    //新旧商品喜好图表
+    public List<Map<String,Object>> newoldgoodsList() {
+        List<Map<String,Object>> list=null;
+        try {
+            list=gDao.newoldgoodslist();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return list;
+    }
+    //各月成交平均价格
+    public List<Map<String,Object>> averagesellingprice() {
+        List<Map<String,Object>> list=null;
+        try {
+            list=gDao.averagesellingprice();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return list;
+    }
 }
