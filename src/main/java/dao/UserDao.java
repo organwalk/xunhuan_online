@@ -14,8 +14,8 @@ public class UserDao {
     //添加一位用户
     public void addUser(User user) throws SQLException {
         QueryRunner r = new QueryRunner(DataSourceUtils.getDataSource());
-        String sql = "insert into tuser(account,password,name,mobile,wechat,department,_class,photo) values(?,md5(?),?,?,?,?,?,?)";
-        r.update(sql,user.getAccount(),user.getPassword(),user.getName(),user.getMobile(),user.getWechat(),user.getDepartment(),user.get_class(),user.getPhoto());
+        String sql = "insert into tuser(account,password,name,mobile,wechat,department,_class,photo,register_date) values(?,md5(?),?,?,?,?,?,?,?)";
+        r.update(sql,user.getAccount(),user.getPassword(),user.getName(),user.getMobile(),user.getWechat(),user.getDepartment(),user.get_class(),user.getPhoto(),user.getRegister_date());
     }
     //查看账号是否存在
     public boolean isUserAccountExist(String account) throws SQLException {

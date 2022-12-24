@@ -19,6 +19,7 @@
         <form action="../needs_add" method="post" enctype="multipart/form-data">
         <input type="hidden" name="_owner" value="${user._id}">
             <input type="hidden" name="typeid" value="2">
+            <input type="hidden" name="publish_date" class="publish_date">
         <div class="imgall">
             <div class="picture" id="picture1">
                 <img src="../image/uploadimg.png" onclick="input_file1()" id="img-preview1">
@@ -65,7 +66,7 @@
                     </div>
                     <div class="text">
                         <a>${user.name}</a>
-                        <p>${user.account}</p>
+                        <p>@${user.account}</p>
                     </div>
                     <div class="add">
                         <button type="submit">发布求购</button>
@@ -77,4 +78,23 @@
     </div>
 </body>
     <script type="text/javascript" src="../js/goods_add.js"></script>
+<script>
+    // 获取当前日期，格式为yyyy-mm-dd
+    function getCurrentDate() {
+        var date = new Date();
+        var year = date.getFullYear();
+        var month = date.getMonth() + 1;
+        var day = date.getDate();
+        month = (month < 10 ? "0" : "") + month;
+        day = (day < 10 ? "0" : "") + day;
+        return year + "-" + month + "-" + day;
+    }
+    window.onload = function() {
+        console.log(getCurrentDate())
+        // 获取当前日期并赋值给隐藏域
+        document.querySelector(".publish_date").value= getCurrentDate();
+        var a = document.querySelector(".publish_date").value
+        console.log(a)
+    }
+</script>
 </html>

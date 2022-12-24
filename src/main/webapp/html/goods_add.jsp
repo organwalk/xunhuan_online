@@ -65,7 +65,7 @@
                     </div>
                     <div class="text">
                         <a>${user.name}</a>
-                        <p>${user.account}</p>
+                        <p>@${user.account}</p>
                     </div>
                     <div class="add">
                         <button type="submit" onclick="submitForm()">发布商品</button>

@@ -660,3 +660,125 @@ body{
     margin-left: 90px;
     margin-top: -24px;
 }
+
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.modal-window {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    height: 400px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.modal-header {
+    position: relative;
+    height: 50px;
+    background: #333;
+}
+.modal-header div{
+    color: #FFFFFF;
+    font-weight: bolder;
+    font-family: "微软雅黑";
+    font-size: 20px;
+    height: 30px;
+    margin-left: 20px;
+    padding-top: 10px;
+}
+.modal-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    font-size: 25px;
+    padding: 0 5px;
+    color: #333;
+    background-color: #FFFFFF;
+    cursor: pointer;
+    border-radius: 50%;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+.modal-body {
+    position: relative;
+    overflow: auto;
+    padding: 15px;
+}
+.modal-body-goods{
+    float: left;
+    width: 200px;
+    height: 300px;
+    border-radius: 15px;
+}
+.modal-body-goodsinfor{
+    float: right;
+    width: 250px;
+    height: 300px;
+}
+.modal-body-goodsinfor2{
+    width: 250px;
+    height: 50px;
+}
+.modal-body-goodsinfor3{
+    width: 250px;
+    height: 80px;
+    overflow: auto;
+}
+.modal-body-goodsinfor4{
+    width: 250px;
+    height: 80px;
+    overflow: auto;
+}
+.maijia{
+    width: 250px;
+    height: 60px;
+    margin-top: 20px;
+}
+.maijia img{
+    float: left;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+.modal-body-goodsinfor5{
+    width: 250px;
+    height: 80px;
+    overflow: auto;
+}
+.maijia2{
+    width: 250px;
+    height: 60px;
+    margin-top: 20px;
+}
+.maijia2 img{
+    float: right;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+a{
+    color: #666666;
+}
+a:focus{
+    color: #666666;
+}
+a:hover{
+    color: #333333;
+    font-weight: bolder;
+}

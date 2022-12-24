@@ -36,6 +36,8 @@
                 <div class="tipmess">${changepwdmsg }</div>
             </c:if>
             <form id="form" action="${path}user_login" method="post">
+            <input class="usertype" style="width: 20px;height: 20px;font-size: 15px;padding-left: 5px;margin-left: 55px" type="radio" name="userType" value="user" checked>&nbsp;User&nbsp;&nbsp;
+            <input class="usertype" style="width: 20px;height: 20px;font-size: 15px;padding-left: 5px" type="radio" name="userType" value="admin">&nbsp;Admin
             <div><label>Account</label><br>
             <input type="text" id="account" name="account"placeholder="Enter your account"><br><br>
             <label>Password</label><br>
@@ -48,8 +50,8 @@
             <h1>Creat new account</h1><br>
             <span>Already A Member? <a id="Login1" href="#">Log in</a></span>
             <br><br><br>
-            <!--account,password,name,mobile,wechat,department,_class,photo-->
             <form id="registerform" action="${path}user_rigister" method="Post" enctype="multipart/form-data">
+                <input type="hidden" name="register_date" class="register_date">
             <div class="icon">
                 <img src="${path}/image/头像.png" onclick="input_file()" id="img-preview">
                 <input type="file" name="photo" onchange="img_preview(this)" id="input-file"><br></div><br><br>
@@ -96,4 +98,23 @@
 </div>
 </body>
 <script type="text/javascript" src="${path}/js/xunhuan.js"></script>
+<script>
+    // 获取当前日期，格式为yyyy-mm-dd
+    function getCurrentDate() {
+        var date = new Date();
+        var year = date.getFullYear();
+        var month = date.getMonth() + 1;
+        var day = date.getDate();
+        month = (month < 10 ? "0" : "") + month;
+        day = (day < 10 ? "0" : "") + day;
+        return year + "-" + month + "-" + day;
+    }
+    window.onload = function() {
+        console.log(getCurrentDate())
+        // 获取当前日期并赋值给隐藏域
+        document.querySelector(".register_date").value= getCurrentDate();
+        var a = document.querySelector(".register_date").value
+        console.log(a)
+    }
+</script>
 </html>

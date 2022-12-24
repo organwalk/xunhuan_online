@@ -100,15 +100,15 @@ $(document).ready(function() {
             $('.zengfu').empty();
             if(growth_rate_percent>0){
             let grate =
-                '<p>↑'+growth_rate_percent+'%&nbsp;&nbsp;<span>Since last month</span></p>'
+                '<p>↑ +'+growth_rate_percent+'%&nbsp;&nbsp;<span>Since last month</span></p>'
                 $(grate).appendTo('.zengfu').fadeIn(5000);
             }else{
             let grate =
                  '<p style="color: #c23531">↓'+growth_rate_percent+'%&nbsp;&nbsp;<span>Since last month</span></p>'
                 $(grate).appendTo('.zengfu').fadeIn(5000);
             }
-            var avgneedprice11 = jsondatasource.averageneedprice[3].avg_price
-            var avgneedprice12 = jsondatasource.averageneedprice[4].avg_price
+            var avgneedprice11 = jsondatasource.averageneedprice[5].avg_price
+            var avgneedprice12 = jsondatasource.averageneedprice[6].avg_price
             var growth_rate2 = (avgneedprice12 - avgneedprice11) / avgneedprice11;
             var growth_rate_percent2 = growth_rate2 * 100
             $('.avgsellprice2').empty();
@@ -119,7 +119,7 @@ $(document).ready(function() {
             $('.zengfu2').empty();
             if(growth_rate_percent2>0){
                 let grate2 =
-                    '<p>↑'+growth_rate_percent2+'%&nbsp;&nbsp;<span>Since last month</span></p>'
+                    '<p>↑ +'+growth_rate_percent2+'%&nbsp;&nbsp;<span>Since last month</span></p>'
                 $(grate2).appendTo('.zengfu2').fadeIn(5000);
             }else{
                 let grate2 =

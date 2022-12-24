@@ -15,6 +15,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
@@ -33,7 +35,18 @@ public class UserRegister extends HttpServlet {
             for(FileItem item:list) {
                 if(item.isFormField()) {
                     switch(item.getFieldName()) {
-                        //account,password,name,mobile,wechat,department,_class,photo
+                        case "register_date":
+                            String rregister_date = item.getString("utf-8");
+                            SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+                            Date zregister_date = null;
+                            try {
+                                zregister_date = dateFormat.parse(rregister_date);
+                            } catch (ParseException e) {
+                                throw new RuntimeException(e);
+                            }
+                            Date register_date = new java.sql.Date(zregister_date.getTime());
+                            user.setRegister_date(register_date);
+                            break;
                         case "account":
                             user.setAccount(item.getString("utf-8"));
                             break;

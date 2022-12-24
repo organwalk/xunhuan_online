@@ -350,4 +350,30 @@ font-family: "微软雅黑";
 font-weight: bolder;
 font-size: 13px;
 }
+.usertype {
+    appearance: none;
+    background-color: #fff;
+    border: 1px solid black;
+    border-radius: 0;
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: middle;
+}
+.usertype:checked {
+    /* Other styles */
+    background-color: black;
+}
+
+.usertype:checked::before {
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border: 2px solid white;
+    border-top: 0;
+    border-left: 0;
+    transform: rotate(45deg);
+    vertical-align: middle;
+}
+
 

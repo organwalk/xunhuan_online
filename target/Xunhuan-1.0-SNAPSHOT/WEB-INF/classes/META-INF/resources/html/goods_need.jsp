@@ -66,7 +66,7 @@
                     </div>
                     <div class="text">
                         <a>${user.name}</a>
-                        <p>${user.account}</p>
+                        <p>@${user.account}</p>
                     </div>
                     <div class="add">
                         <button type="submit">发布求购</button>

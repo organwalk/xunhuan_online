@@ -482,21 +482,7 @@ $(document).ready(function () {
                 // 显示当前页的记录
                 const startIndex = (page - 1) * pageSize;
                 const endIndex = startIndex + pageSize;
-                for (let i = startIndex; i < endIndex && i < jsonalluser.length; i++) {
-                    let item = jsonalluser[i];
-                    if (item.state == "正常" && item.report_count == 0) {
-                        let allResult =
-                            '<tr class="usertr">' +
-                            '<<td class="ttd"><img class="usericon" src="../' + item.photo + '"></td>' +
-                            '<td>@' + item.account + '<br>' + item.name + '</td>' +
-                            '<td>' + item.department + '<br>' + item._class + '</td>' +
-                            '<td>' + item.mobile + '<br>' + item.wechat + '</td>' +
-                            '<td>' + item.register_date + '</td>' +
-                            '<td>' + item.state + '</td>' +
-                            ' <td class="wtd">无需操作</td></tr>'
-                        $(allResult).appendTo('.userta').fadeIn(5000);
-                    }
-                }
+                userlist_normal(endIndex, jsonalluser);
             }
 
             window.displayPage = displayPage;
@@ -571,6 +557,7 @@ $(document).ready(function () {
                         '<td>' + item.price + '元</td>' +
                         '<td>' + wait + '</td>' +
                         '<td>' + item.finished_date + '</td>' +
+                        '<td style="display: none">' + item._id+ '</td>' +
                         '<td><a class="moneywatch" href="#">查看</a> | <a class="moneydelete" href="#">删除</a></td>'
                     $(allResult).appendTo('.orderta').fadeIn(5000);
                 }
@@ -599,7 +586,7 @@ $(document).ready(function () {
                 let buyer_photo = tr.find('td:nth-child(9)').text();
                 let buyer_name = tr.find('td:nth-child(10)').text();
                 let buyer_account = tr.find('td:nth-child(11)').text();
-                let thing_price = tr.find('td:nth-child(12').text();
+                let thing_price = tr.find('td:nth-child(12)').text();
                 displayModal(thing_name,thing_photo,thing_memo,owner_photo,owner_name,owner_account,buyer_photo,buyer_name,buyer_account,thing_price);
             });
 
@@ -647,6 +634,24 @@ $(document).ready(function () {
             // 关闭模态框
             $(document).on('click', '.modal-close', function () {
                 $('.modal-overlay').hide();
+            });
+
+            // 现金交易--点击删除
+            $(document).on('click', '.moneydelete', function () {
+                // 获取被点击的元素所在的行
+                let tr = $(this).closest('tr');
+                // 获取行中数据
+                let thing_id = tr.find('td:nth-child(15)').text();
+                $.ajax({
+                    url: 'http://localhost:8080/Xunhuan_war_exploded/listdeletegoods',
+                    type: 'GET',
+                    data: {
+                        _id: thing_id
+                    },
+                    success: function (response) {
+                        window.location.reload();
+                    }
+                });
             });
         }
     });
@@ -713,6 +718,7 @@ $(document).ready(function () {
                                 '<td>' + item.price + '元</td>' +
                                 '<td>' + wait + '</td>' +
                                 '<td>' + item.finished_date + '</td>' +
+                                '<td style="display: none">' + item._id+ '</td>' +
                                 '<td><a class="moneywatch" href="#">查看</a> | <a class="moneydelete" href="#">删除</a></td>'
                             $(allResult).appendTo('.orderta').fadeIn(5000);
 
@@ -790,6 +796,24 @@ $(document).ready(function () {
                     $(document).on('click', '.modal-close', function () {
                         $('.modal-overlay').hide();
                     });
+
+                    // 现金交易--点击删除
+                    $(document).on('click', '.moneydelete', function () {
+                        // 获取被点击的元素所在的行
+                        let tr = $(this).closest('tr');
+                        // 获取行中数据
+                        let thing_id = tr.find('td:nth-child(15)').text();
+                        $.ajax({
+                            url: 'http://localhost:8080/Xunhuan_war_exploded/listdeletegoods',
+                            type: 'GET',
+                            data: {
+                                _id: thing_id
+                            },
+                            success: function (response) {
+                                window.location.reload();
+                            }
+                        });
+                    });
                 }
             });
         }
@@ -855,7 +879,7 @@ $(document).ready(function () {
                                 '<td>' + item.price_low +'-'+item.price_high+'元</td>' +
                                 '<td>' + wait + '</td>' +
                                 '<td>' + item.finished_date + '</td>' +
-                                '<td><a class="needwatch" href="#">查看</a> | <a class="moneydelete" href="#">删除</a></td>'
+                                '<td><a class="needwatch" href="#">查看</a> | <a class="needdelete" href="#">删除</a></td>'
                             $(allResult).appendTo('.orderta').fadeIn(5000);
                         }
                     }
@@ -931,6 +955,24 @@ $(document).ready(function () {
                     // 关闭模态框
                     $(document).on('click', '.modal-close', function () {
                         $('.modal-overlay').hide();
+                    });
+
+                    // 求购交易--点击删除
+                    $(document).on('click', '.needdelete', function () {
+                        // 获取被点击的元素所在的行
+                        let tr = $(this).closest('tr');
+                        // 获取行中数据
+                        let thing_id = tr.find('td:nth-child(15)').text();
+                        $.ajax({
+                            url: 'http://localhost:8080/Xunhuan_war_exploded/listdeleteneeds',
+                            type: 'GET',
+                            data: {
+                                _id: thing_id
+                            },
+                            success: function (response) {
+                                window.location.reload();
+                            }
+                        });
                     });
                 }
             });
