@@ -110,6 +110,7 @@
                         <c:if test="${!empty waitMsg2 }">
                             <form action="${path}confirmrequestneeds" method="Get">
                                 <input type="hidden" name="_id" value="${g._id}">
+                                <input type="hidden" name="finished_date" class="finished_date">
                                 <button type="submit" onclick="submitForm()" id="confirm1">${waitMsg2}</button>
                             </form>
                         </c:if>
@@ -145,20 +146,22 @@
     }, 1000);
 </script>
 <script>
-    function submitForm() {
-        // 获取当前的年月日
+    // 获取当前日期，格式为yyyy-mm-dd
+    function getCurrentDate() {
         var date = new Date();
         var year = date.getFullYear();
-        var month = date.getMonth() + 1; // 0-based
+        var month = date.getMonth() + 1;
         var day = date.getDate();
-        // 向表单中添加一个新的隐藏字段，其中包含当前的年月日
-        var input = document.createElement("input");
-        input.type = "hidden";
-        input.name = "finished_date";
-        input.value = year + "-" + month + "-" + day;
-        document.forms[0].appendChild(input);
-        // 提交表单
-        document.forms[0].submit();
+        month = (month < 10 ? "0" : "") + month;
+        day = (day < 10 ? "0" : "") + day;
+        return year + "-" + month + "-" + day;
+    }
+    window.onload = function() {
+        console.log(getCurrentDate())
+        // 获取当前日期并赋值给隐藏域
+        document.querySelector(".finished_date").value= getCurrentDate();
+        var a = document.querySelector(".finished_date").value
+        console.log(a)
     }
 </script>
 </html>

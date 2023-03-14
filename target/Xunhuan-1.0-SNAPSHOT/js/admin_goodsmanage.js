@@ -92,6 +92,8 @@ $(document).ready(function() {
             var avgsellprice12 = jsondatasource.averagesellingprice[6].avg_price
             var growth_rate = (avgsellprice12 - avgsellprice11) / avgsellprice11;
             var growth_rate_percent = growth_rate * 100
+            growth_rate_percent = growth_rate_percent.toFixed(1);
+            growth_rate_percent = parseFloat(growth_rate_percent);
             $('.avgsellprice').empty();
             let avgsellprice =
                 '<h5>Average Selling Price</h5>' +
